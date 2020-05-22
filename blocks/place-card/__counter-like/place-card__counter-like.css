@@ -1,0 +1,13 @@
+.place-card__counter-like {
+    position: absolute;
+    bottom: 17px;
+    right: 27px;
+    width: 9px;
+    height: 13px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+
+}

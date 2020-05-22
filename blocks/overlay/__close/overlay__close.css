@@ -1,0 +1,9 @@
+.overlay__close {
+    max-width: 40.7px;
+    position: absolute;
+    top: -33px;
+    right: -33px;
+    cursor: pointer;
+
+
+}

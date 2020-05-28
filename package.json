@@ -1,0 +1,53 @@
+{
+  "name": "yandex_praktikum",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./src/js/index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZinovievaNV/sprint11_yandex-praktikum.git"
+  },
+  "author": "Zinovieva Natalya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZinovievaNV/sprint11_yandex-praktikum/issues"
+  },
+  "homepage": "https://github.com/ZinovievaNV/sprint11_yandex-praktikum#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.1",
+    "core-js": "^3.4.1",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "image-webpack-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "style-loader": "^1.2.1",
+    "sugarss": "^2.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-md5-hash": "0.0.6",
+    "webpack-merge": "^4.2.2"
+  }
+}

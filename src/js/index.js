@@ -1,4 +1,3 @@
-
 import  "../pages/index.css"
 import Api from './Api/Api.js';
 import Card from '../../src/js/Card/Card'
@@ -23,7 +22,7 @@ import UserInfo from './UserInfo/UserInfo.js';
     };
 
     const api = new Api({
-        baseUrl: 'https://praktikum.tk/cohort10',
+        baseUrl: (NODE_ENV === 'development' ? 'http://' : 'https://') + 'praktikum.tk/cohort10',
         headers: {
             authorization: 'b51b3e77-092b-469c-b408-ade936850af2',
             'Content-Type': 'application/json'

@@ -14,4 +14,8 @@
 
 .place-card__like-icon:hover {
   transform: scale(1.03);
+
+}
+.place-card__like-icon:focus {
+  outline: none;
 }

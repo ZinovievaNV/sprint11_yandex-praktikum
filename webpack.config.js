@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 const CopyPlugin = require('copy-webpack-plugin');
-
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: {main: './src/js/index.js'},
@@ -30,7 +30,16 @@ module.exports = {
                         options: {
                             importLoaders: 2
                         }
-                    }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                autoprefixer()
+                            ],
+                            sourceMap: true
+                        }
+                    },
 
                 ]
             },
@@ -41,7 +50,7 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: 'images/[name].[ext]',
-                             useRelativePath: true,
+                            useRelativePath: true,
                             esModule: false,
                         }
                     },
@@ -49,7 +58,7 @@ module.exports = {
                         loader: 'image-webpack-loader',
                         options: {
                             mozjpeg: {
-                                 progressive: true,
+                                progressive: true,
                                 quality: 65
                             }
                         }
